@@ -1,0 +1,87 @@
+@startuml lab-34
+
+class App{
+}
+
+class Nav{
+}
+
+class Login{
+}
+
+class ACLAuth{
+}
+
+class ToDo{
+}
+
+class Counter{
+}
+
+class Form{
+}
+
+class List{
+}
+
+class AppContextProvider{
+  ==context==
+  # todoList:Array
+  # item:Object
+  # editing:Boolean
+  # handleInputChange:function
+  # addItem:function
+  # updateItem:function
+  # toggleComplete:function
+  # saveItem:function
+  # toggleEdit:function
+    ==state==
+  # todoList:Array
+  # item:Object
+  # editing:Boolean
+  # handleInputChange:function
+  # addItem:function
+  # updateItem:function
+  # toggleComplete:function
+  # saveItem:function
+  # toggleEdit:function
+  ==methods==
+  +handleInputChange()
+  +addItem()
+  +updateItem()
+  +toggleComplete()
+  +saveItem()
+  +toggleEdit()
+}
+
+class AuthContextProvider{
+  ==context==
+  # loggedIn:Boolean
+  # token:String
+  # login:function
+  # logout:function
+    ==state==
+  # loggedIn:Boolean
+  # token:String
+  ==methods==
+  +login()
+  +logout()
+}
+
+App --* AppContextProvider
+App --* AuthContextProvider
+App --* Nav
+AppContextProvider --* ToDo
+AuthContextProvider --* ToDo
+AuthContextProvider --# Login
+AuthContextProvider --# ACLAuth
+ToDo --* Counter
+ToDo --* Form
+ToDo --* List
+Counter --* ACLAuth
+Form --* ACLAuth
+List --* ACLAuth
+
+
+
+@enduml
