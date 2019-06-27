@@ -8,6 +8,14 @@
 
 - [CodeSandbox](https://codesandbox.io/embed/lab-34-y3zx5)
 
+### Documentation
+
+| Username | Password | Capabilites                  |
+| -------- | -------- | ---------------------------- |
+| user     | USER     | read                         |
+| editor   | EDITOR   | create, read, update         |
+| admin    | ADMIN    | create, read, update, delete |
+
 ### Setup
 
 #### `.env` requirements
