@@ -12,8 +12,8 @@
 
 #### `.env` requirements
 
-- `REACT_APP_AUTH_API` https://api-js401.herokuapp.com
-- `SECRET` supersecret
+- `REACT_APP_AUTH_API` - https://api-js401.herokuapp.com
+- `SECRET` - supersecret
 
 #### Tests
 
